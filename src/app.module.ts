@@ -8,9 +8,15 @@ import { AppController } from './app.controller';
 import { PostsModule } from './modules/posts/posts.module';
 import { configurationService } from './config';
 import { UsersModule } from './modules/users/users.module';
+import { join } from 'path';
+import { ServeStaticModule } from '@nestjs/serve-static';
 
 @Module({
   imports: [
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'swagger-static'),
+      serveRoot: '/',
+    }),
     ConfigModule.forRoot(),
     ThrottlerModule.forRootAsync(configurationService.getThrottleConfig()),
     TypeOrmModule.forRootAsync(
