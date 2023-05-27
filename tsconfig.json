@@ -17,15 +17,5 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
-    "paths": {
-      "@app/config": ["./src/config"],
-      "@app/services": ["./src/services"],
-      "@app/modules": ["./src/modules"],
-      "@app/types": ["./src/@types"],
-      "@app/decorators": ["./src/common/decorators"],
-      "@app/exceptions": ["./src/common/exceptions"],
-      "@app/pipes": ["./src/common/pipes"],
-      "@app/validation": ["./src/lib/validation"],
-    }
   }
 }
